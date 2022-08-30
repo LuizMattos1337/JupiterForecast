@@ -24,6 +24,6 @@ public class OwmController {
 
     @GetMapping(path = "/hello")
     public String helloWorld(){
-        return "Hello world from FriendlyForecast";
+        return "Hello world from JupiterForecast";
     }
 }
