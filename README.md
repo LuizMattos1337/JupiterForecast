@@ -1,1 +1,1 @@
-# FriendlyForecast
+# JupiterForecast
