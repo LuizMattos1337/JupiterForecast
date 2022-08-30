@@ -7,10 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.HttpServerErrorException;
 import tech.luizmattos.exception.JupiterException;
-
-import java.util.Objects;
 
 @RestController
 public class OwmController {
@@ -24,12 +21,10 @@ public class OwmController {
         owm.setUnit(OWM.Unit.IMPERIAL);
         try {
             CurrentWeather currentWeather = owm.currentWeatherByZipCode(zipCode);
-            if (Objects.isNull(currentWeather)){
-            }
             return "It's currently " + currentWeather.getMainData().getTemp() + " degrees in " +currentWeather.getCityName();
 
-        } catch (Exception e){
-            System.out.println("Add a logger here");
+        } catch (NullPointerException | APIException e){
+            System.out.println(e.getMessage());
             throw new JupiterException("Sorry, something went wrong");
         }
     }
