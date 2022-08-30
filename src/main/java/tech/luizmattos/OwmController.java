@@ -28,7 +28,19 @@ public class OwmController {
             throw new JupiterException("Sorry, something went wrong");
         }
     }
-    
+
+    @GetMapping(path = "/api/v1/json/weather")
+    public CurrentWeather getWeatherObject(@RequestParam int zipCode) throws JupiterException {
+        OWM owm = new OWM(owmSettings.getApiKey());
+        owm.setUnit(OWM.Unit.IMPERIAL);
+        try {
+            return owm.currentWeatherByZipCode(zipCode);
+
+        } catch (APIException e){
+            System.out.println(e.getMessage());
+            throw new JupiterException("Sorry, something went wrong");
+        }
+    }
 
     @GetMapping(path = "/hello")
     public String helloWorld(){
