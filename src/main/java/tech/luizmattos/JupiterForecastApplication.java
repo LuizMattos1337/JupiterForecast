@@ -5,12 +5,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FriendlyForecastApplication {
+public class JupiterForecastApplication {
 
 
 
     public static void main(String[] args) throws APIException {
-        SpringApplication.run(FriendlyForecastApplication.class, args);
+        SpringApplication.run(JupiterForecastApplication.class, args);
 
     }
 
