@@ -1,4 +1,4 @@
-package tech.luizmattos;
+package tech.luizmattos.config;
 
 import lombok.Getter;
 import lombok.Setter;
