@@ -6,12 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class JupiterForecastApplication {
-
-
-
-    public static void main(String[] args) throws APIException {
+        public static void main(String[] args) {
         SpringApplication.run(JupiterForecastApplication.class, args);
 
     }
+
 
 }
