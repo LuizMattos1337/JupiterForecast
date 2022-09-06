@@ -26,6 +26,17 @@ public class OwmController {
         }
     }
 
+    @GetMapping(path = "/api/v1/weather/text")
+    public String getWeatherTextByZipCode(@RequestParam String zipCode) throws BadRequestException {
+
+        try {
+            return forecastService.getWeatherByZipCode(zipCode).toString();
+        } catch (NullPointerException | NotFoundException e){
+            System.out.println(e.getMessage()+e.getClass());
+            throw new BadRequestException(e.getMessage());
+        }
+    }
+
     @GetMapping(path = "/hello")
     public String helloWorld(){
         return "Hello world from JupiterForecast";
