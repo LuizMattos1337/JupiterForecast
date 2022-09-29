@@ -28,7 +28,7 @@ owm.apiKey=yourApiKeyGoesHere
 ```
 Location: New York(US), Weather: overcast clouds, 65.37 °F, 1023.0 hPa, Clouds: 100%
 ```
-* If you would prefer to receive the full (VERY detailed) weather information, instead use `http://localhost:8080/api/v1/weather?zipCode=10108`
+* If you would prefer to receive the full (VERY detailed) weather information, instead use http://localhost:8080/api/v1/weather?zipCode=10108
 
 ### Want to try it now?
 This application is running and deployed and can be found [here](http://jupiterforecast.luizmattos.tech/api/v1/weather?zipCode=10108) until Heroku discontinues their free tier on November 28, 2022. At that point, I'll have to weigh my options and possibly migrate to another hosting solution.
