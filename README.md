@@ -10,7 +10,7 @@ This is a simple project I created to test the skills I had been learning in my 
 
 ### Dependencies
 
-* JRE/JRE version 18.0.2 or higher
+* JRE version 18.0.2 or higher
 * You will need an OpenWeatherMap API key which can be acquired for free on [their website](https://openweathermap.org/appid).
 
 ### Installing
