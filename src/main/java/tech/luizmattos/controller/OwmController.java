@@ -2,6 +2,7 @@ package tech.luizmattos.controller;
 
 import com.github.prominence.openweathermap.api.model.weather.Weather;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,6 +11,7 @@ import tech.luizmattos.exception.NotFoundException;
 import tech.luizmattos.service.ForecastService;
 
 @RestController
+@CrossOrigin
 public class OwmController {
 
     @Autowired
